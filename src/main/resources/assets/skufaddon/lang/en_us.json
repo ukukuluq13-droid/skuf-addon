@@ -13,6 +13,22 @@
   "item.skufaddon.puff_smoke_bucket": "Puff Smoke Cylinder",
   "item.skufaddon.jizhnyak_bucket": "Jizhnyak Bucket",
 
+  "item.skufaddon.item_cnc_bit": "CNC Bit",
+  "item.skufaddon.component_cnc_cutter": "CNC Cutter",
+  "item.skufaddon.item_pukan_indicator_core": "Pukan Indicator Core",
+  "item.skufaddon.item_pravilnaya_vesh": "The Correct Thing",
+  "item.skufaddon.melted_capacitor": "Melted Capacitor",
+  "item.skufaddon.burnt_cable_debris": "Burnt Cable Debris",
+  "item.skufaddon.charred_developer_circuit": "Charred Developer Circuit",
+  "item.skufaddon.item_myposhko_script": "Myposhko Script",
+  "item.skufaddon.item_egor_core": "Egor Core",
+  "item.skufaddon.item_correct_matter_microcapsule": "Correct Matter Microcapsule",
+  "item.skufaddon.item_antizoomer_core": "Anti-Zoomer Core",
+  "item.skufaddon.item_correct_developer_schematic": "Correct Developer Schematic",
+  "item.skufaddon.item_normis_singularity": "Normie Singularity",
+  "item.skufaddon.item_absolute_pohuit": "Absolute Pohuit",
+  "item.skufaddon.item_arturian_mainframe": "Arturian Mainframe",
+
   "gtceu.recipe.normis_filtration": "Normis Filtration",
 
   "block.skufaddon.lv_normis_filtration_machine": "Normis Filtration Machine (LV)",

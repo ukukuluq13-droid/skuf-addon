@@ -13,6 +13,22 @@
   "item.skufaddon.puff_smoke_bucket": "Баллон Дыма от Пыхчения",
   "item.skufaddon.jizhnyak_bucket": "Ведро Жижняка",
 
+  "item.skufaddon.item_cnc_bit": "ЧПУ-резец",
+  "item.skufaddon.component_cnc_cutter": "Резак ЧПУ",
+  "item.skufaddon.item_pukan_indicator_core": "Ядро Индикатора Пукана",
+  "item.skufaddon.item_pravilnaya_vesh": "Правильная Вещь",
+  "item.skufaddon.melted_capacitor": "Оплавленный Конденсатор",
+  "item.skufaddon.burnt_cable_debris": "Кабельные Обломки",
+  "item.skufaddon.charred_developer_circuit": "Обугленная Плата Разработчика",
+  "item.skufaddon.item_myposhko_script": "Скрипт Мыпошко",
+  "item.skufaddon.item_egor_core": "Ядро Егора",
+  "item.skufaddon.item_correct_matter_microcapsule": "Микрокапсула Правильной Материи",
+  "item.skufaddon.item_antizoomer_core": "Антизумерное Ядро",
+  "item.skufaddon.item_correct_developer_schematic": "Правильная Разрабская Схема",
+  "item.skufaddon.item_normis_singularity": "Нормисная Сингулярность",
+  "item.skufaddon.item_absolute_pohuit": "Абсолютный Похуит",
+  "item.skufaddon.item_arturian_mainframe": "Артурийский Мейнфрейм",
+
   "gtceu.recipe.normis_filtration": "Нормис-фильтрация",
 
   "block.skufaddon.lv_normis_filtration_machine": "Нормис Фильтратор (LV)",

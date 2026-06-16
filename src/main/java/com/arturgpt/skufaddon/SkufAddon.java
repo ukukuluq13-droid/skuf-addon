@@ -1,5 +1,6 @@
 package com.arturgpt.skufaddon;
 
+import com.arturgpt.skufaddon.common.data.SkufItems;
 import com.arturgpt.skufaddon.common.data.SkufMachines;
 import com.arturgpt.skufaddon.common.data.SkufMaterials;
 import com.arturgpt.skufaddon.common.data.SkufRecipeTypes;
@@ -42,6 +43,9 @@ public class SkufAddon {
         modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
         modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
         modEventBus.addGenericListener(SoundEntry.class, this::registerSounds);
+
+        // Регистрируем предметы ArthurTech через Registrate (отложенно, до RegisterEvent<Item>).
+        SkufItems.init();
 
         REGISTRATE.registerRegistrate();
     }
