@@ -7,7 +7,6 @@ import com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialIconSet;
 import com.gregtechceu.gtceu.api.fluids.FluidBuilder;
 import com.gregtechceu.gtceu.api.fluids.attribute.FluidAttributes;
 
-import net.minecraft.resources.ResourceLocation;
 
 import static com.gregtechceu.gtceu.api.data.chemical.material.info.MaterialFlags.*;
 
@@ -73,7 +72,7 @@ public class SkufMaterials {
 
     public static void init() {
         // Скуфит — ранний грязный металл. Теперь добывается рудой (разблокировка старта).
-        skufit = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "skufit"))
+        skufit = new Material.Builder(SkufAddon.id("skufit"))
                 .ingot()
                 .ore()
                 .liquid(new FluidBuilder().temperature(1200))
@@ -88,7 +87,7 @@ public class SkufMaterials {
                 .buildAndRegister();
 
         // Похуит — стабильный сплав-металл. Теперь добывается рудой (нужен для корпусов мультиблоков).
-        pokhuit = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "pokhuit"))
+        pokhuit = new Material.Builder(SkufAddon.id("pokhuit"))
                 .ingot()
                 .ore()
                 .liquid(new FluidBuilder().temperature(2400))
@@ -102,20 +101,20 @@ public class SkufMaterials {
                         GENERATE_FOIL)
                 .buildAndRegister();
 
-        sweat = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "sweat"))
+        sweat = new Material.Builder(SkufAddon.id("sweat"))
                 .liquid(new FluidBuilder()
                         .temperature(310)
                         .attribute(FluidAttributes.ACID))
                 .color(0xD4C84A)
                 .buildAndRegister();
 
-        puffSmoke = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "puff_smoke"))
+        puffSmoke = new Material.Builder(SkufAddon.id("puff_smoke"))
                 .gas(new FluidBuilder()
                         .temperature(600))
                 .color(0x2A2A2A)
                 .buildAndRegister();
 
-        jizhnyak = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "jizhnyak"))
+        jizhnyak = new Material.Builder(SkufAddon.id("jizhnyak"))
                 .liquid(new FluidBuilder()
                         .temperature(340)
                         .attribute(FluidAttributes.ACID))
@@ -123,14 +122,14 @@ public class SkufMaterials {
                 .buildAndRegister();
 
         // Нормис-пыль: серая безликая масса, перемолотый «мусор нормиса».
-        normieDust = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "normie_dust"))
+        normieDust = new Material.Builder(SkufAddon.id("normie_dust"))
                 .dust()
                 .color(0x8A8A8A)
                 .iconSet(MaterialIconSet.ROUGH)
                 .buildAndRegister();
 
         // Честная Сталь: сплав скуфита и очищенной нормис-пыли.
-        honestSteel = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "honest_steel"))
+        honestSteel = new Material.Builder(SkufAddon.id("honest_steel"))
                 .ingot()
                 .liquid(new FluidBuilder().temperature(1700))
                 .color(0x9AA4AD)
@@ -142,7 +141,7 @@ public class SkufMaterials {
                 .buildAndRegister();
 
         // Правильная Материя: кристалл «правильности», выделенный из жижняка.
-        correctMatter = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "correct_matter"))
+        correctMatter = new Material.Builder(SkufAddon.id("correct_matter"))
                 .gem()
                 .color(0x36C9B0)
                 .iconSet(MaterialIconSet.GEM_VERTICAL)
@@ -150,7 +149,7 @@ public class SkufMaterials {
                 .buildAndRegister();
 
         // Уральский Изотоп: радиоактивный остаток жижняка.
-        uralIsotope = new Material.Builder(ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "ural_isotope"))
+        uralIsotope = new Material.Builder(SkufAddon.id("ural_isotope"))
                 .dust()
                 .color(0x66FF33)
                 .iconSet(MaterialIconSet.RADIOACTIVE)
@@ -159,7 +158,7 @@ public class SkufMaterials {
 
         // Стабилизированный Вайб: светящаяся жидкость спокойствия, гасит энтропию/пукан.
         stabilizedVibe = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "stabilized_vibe"))
+                SkufAddon.id("stabilized_vibe"))
                 .liquid(new FluidBuilder()
                         .temperature(295))
                 .color(0x49E0D0)
@@ -169,7 +168,7 @@ public class SkufMaterials {
         // Челябинский сланец: тёмно-зелёная радиоактивная руда. Дробится в Уральский Изотоп.
         // .ore() создаёт рудный блок; побочкой при обогащении идёт изотоп.
         chelyabinskShale = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "chelyabinsk_shale"))
+                SkufAddon.id("chelyabinsk_shale"))
                 .dust()
                 .ore()
                 .color(0x4C7A2E)
@@ -182,7 +181,7 @@ public class SkufMaterials {
 
         // Шлак Игнора: серо-бурый спёкшийся остаток того, что «проигнорировали».
         slagIgnore = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "slag_ignore"))
+                SkufAddon.id("slag_ignore"))
                 .dust()
                 .color(0x4A4038)
                 .iconSet(MaterialIconSet.ROUGH)
@@ -190,21 +189,21 @@ public class SkufMaterials {
 
         // Жижняк Потерь: мутный сток, в который утекли ресурсы залипшей линии.
         zhizhnyakLoss = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "zhizhnyak_loss"))
+                SkufAddon.id("zhizhnyak_loss"))
                 .liquid(new FluidBuilder().temperature(330))
                 .color(0x3E3A2A)
                 .buildAndRegister();
 
         // Газ Угара: едкий тёмно-оранжевый выхлоп скрытого перегрева.
         ugarGas = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "ugar_gas"))
+                SkufAddon.id("ugar_gas"))
                 .gas(new FluidBuilder().temperature(720))
                 .color(0xB85C1E)
                 .buildAndRegister();
 
         // Скрытый Пот: «невидимое» напряжение, копящееся под игнором (горячая жидкость).
         hiddenSweat = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "hidden_sweat"))
+                SkufAddon.id("hidden_sweat"))
                 .liquid(new FluidBuilder()
                         .temperature(360)
                         .attribute(FluidAttributes.ACID))
@@ -213,7 +212,7 @@ public class SkufMaterials {
 
         // Сгущённый Пот: сконденсированный скрытый пот, пригоден к переработке.
         condensedSweat = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "condensed_sweat"))
+                SkufAddon.id("condensed_sweat"))
                 .liquid(new FluidBuilder().temperature(305))
                 .color(0xE6D24A)
                 .iconSet(MaterialIconSet.SHINY)
@@ -222,7 +221,7 @@ public class SkufMaterials {
         // Технические Слёзы: грустный кристаллический осадок «плачущих механизмов»
         // после жёсткого «Разбора геймплея». Пыль (собирается) + жидкость (для труб).
         technicalTears = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "technical_tears"))
+                SkufAddon.id("technical_tears"))
                 .dust()
                 .liquid(new FluidBuilder().temperature(285))
                 .color(0x4F7FB5)
@@ -231,7 +230,7 @@ public class SkufMaterials {
 
         // Охладитель Отрицания: холодная рабочая жидкость анти-тильт контура (EV+).
         coolantOfDenial = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "coolant_of_denial"))
+                SkufAddon.id("coolant_of_denial"))
                 .liquid(new FluidBuilder().temperature(255))
                 .color(0x2FB7C9)
                 .iconSet(MaterialIconSet.SHINY)
@@ -239,7 +238,7 @@ public class SkufMaterials {
 
         // Тёплый Вайбовый Пар: горячий побочный газ Сауны (конденсируется обратно).
         warmVibeSteam = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "warm_vibe_steam"))
+                SkufAddon.id("warm_vibe_steam"))
                 .gas(new FluidBuilder().temperature(380))
                 .color(0xC9B98F)
                 .buildAndRegister();
@@ -247,7 +246,7 @@ public class SkufMaterials {
         // --- Эндгейм ---
         // Благородный Газ Падика: холодный инертный газ, полностью вымышленный.
         padikNobleGas = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "padik_noble_gas"))
+                SkufAddon.id("padik_noble_gas"))
                 .gas(new FluidBuilder().temperature(120))
                 .color(0x6B5E8C)
                 .iconSet(MaterialIconSet.SHINY)
@@ -255,7 +254,7 @@ public class SkufMaterials {
 
         // Плотный Жижняк: сгущённая до киселя биомасса, тяжёлый компонент капсулы стазиса.
         denseJizhnyak = new Material.Builder(
-                ResourceLocation.fromNamespaceAndPath(SkufAddon.MOD_ID, "dense_jizhnyak"))
+                SkufAddon.id("dense_jizhnyak"))
                 .liquid(new FluidBuilder().temperature(330))
                 .color(0x3E5A2A)
                 .buildAndRegister();
