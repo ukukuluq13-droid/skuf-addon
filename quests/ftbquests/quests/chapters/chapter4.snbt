@@ -1,0 +1,26 @@
+{
+	id: "B9EDCF24B807EDCF"
+	group: ""
+	order_index: 4
+	filename: "chapter4"
+	title: "Разрабская неоднозначность"
+	icon: "minecraft:redstone"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Работает — не трогай. Сломалось — ты разраб"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Стабилизируй нестабильную разрабскую схему вайбом."
+				"Получишь Правильную разрабскую схему."
+			]
+			dependencies: ["F943C7B42F4FEF30"]
+			id: "2269CD61F0278EBD"
+			tasks: [{ id: "1B639CECEE4DC559" type: "item" item: "skufaddon:item_correct_developer_schematic" }]
+			rewards: [{ id: "AC1408DBECD02A94" type: "xp" xp: 30 }]
+		}
+	]
+	quest_links: [ ]
+}

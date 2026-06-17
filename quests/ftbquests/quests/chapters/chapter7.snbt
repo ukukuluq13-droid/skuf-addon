@@ -1,0 +1,26 @@
+{
+	id: "9565CFA8D0C217AE"
+	group: ""
+	order_index: 7
+	filename: "chapter7"
+	title: "Дискорд всё"
+	icon: "minecraft:ender_pearl"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Не установлен маршрут — значит, нужен роутер"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Построй логистику и сеть. Дискорд всё, но трубы — наше всё."
+				"Подготовь Мыпошко-скрипт для кривой автоматизации."
+			]
+			dependencies: ["4E05B68A0157E25A"]
+			id: "5451306762FBFA7A"
+			tasks: [{ id: "713A87E6775F1197" type: "checkmark" title: "Поехали" }]
+			rewards: [{ id: "AF83BD38CCC2126E" type: "xp" xp: 40 }]
+		}
+	]
+	quest_links: [ ]
+}
