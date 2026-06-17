@@ -1,0 +1,26 @@
+{
+	id: "51E60E07EE5D69B2"
+	group: ""
+	order_index: 2
+	filename: "chapter2"
+	title: "Нормисный фильтр"
+	icon: "minecraft:hopper"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Фильтруй не людей, а жижу. Пока что"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Построй Нормис-Фильтрацию и прогони через неё жижу."
+				"Получишь нормис-пыль — основа всего."
+			]
+			dependencies: ["E4481CF7DF4A0DB1"]
+			id: "0744BDAB27B3E29D"
+			tasks: [{ id: "A89D732FFAB089F3" type: "checkmark" title: "Поехали" }]
+			rewards: [{ id: "79F9E8B5F6867423" type: "xp" xp: 15 }]
+		}
+	]
+	quest_links: [ ]
+}

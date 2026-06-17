@@ -1,0 +1,27 @@
+{
+	id: "536F396C5EA13460"
+	group: ""
+	order_index: 0
+	filename: "chapter0"
+	title: "Перед тем как всё стало жижей"
+	icon: "minecraft:dead_bush"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Добро пожаловать в деградацию"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: [
+				"Мир скис. Культуры нет, есть жижа."
+				"Не потеем — просто начинаем."
+				"Открой инвентарь и оглядись: дальше только грязнее."
+			]
+			id: "9356AF8DC6E455BA"
+			tasks: [{ id: "87E2968648EA3CE0" type: "checkmark" title: "Поехали" }]
+			rewards: [{ id: "1E1F0E87EF34DBD1" type: "xp" xp: 5 }]
+		}
+	]
+	quest_links: [ ]
+}

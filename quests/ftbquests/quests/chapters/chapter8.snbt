@@ -1,0 +1,39 @@
+{
+	id: "EF478E77401E4952"
+	group: ""
+	order_index: 8
+	filename: "chapter8"
+	title: "Конец культуры"
+	icon: "minecraft:nether_star"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Интернет всё смешал. Разделяй центрифугой"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"EV-волны хаоса. Спрессуй энтропию в Нормисную Сингулярность."
+			]
+			dependencies: ["5451306762FBFA7A"]
+			id: "4C962056885ACD3B"
+			tasks: [{ id: "A099E63BC539D982" type: "item" item: "skufaddon:item_normis_singularity" }]
+			rewards: [{ id: "470CC3AE6D394350" type: "xp" xp: 60 }]
+		}
+		{
+			title: "Лирика в Падике"
+			x: 2.0d
+			y: 0.0d
+			description: [
+				"Это не решение проблемы."
+				"Это возможность 90 секунд не быть участником проблемы."
+				"Скрафти капсулу аварийного стазиса."
+			]
+			dependencies: ["4C962056885ACD3B"]
+			id: "8FEB9EA0C7824199"
+			tasks: [{ id: "54489CE004A76B12" type: "item" item: "skufaddon:item_lyrika_v_padike" }]
+			rewards: [{ id: "E6AE529CA74CEAB1" type: "xp" xp: 50 }]
+		}
+	]
+	quest_links: [ ]
+}

@@ -1,0 +1,26 @@
+{
+	id: "2EC4D1923E6B92E0"
+	group: ""
+	order_index: 5
+	filename: "chapter5"
+	title: "Вайб и похуизм"
+	icon: "minecraft:experience_bottle"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Система ломается, но уже не у тебя"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Построй Стабилизатор Вайба и налей Стабилизированного Вайба."
+				"Это успокаивает производство и пукан."
+			]
+			dependencies: ["2269CD61F0278EBD"]
+			id: "E2E91E1BE9ED2CA3"
+			tasks: [{ id: "ABD3D074269E7336" type: "item" item: "skufaddon:stabilized_vibe_bucket" }]
+			rewards: [{ id: "B1A94F958C2D5896" type: "xp" xp: 30 } { id: "0835C5ECE330F6B9" type: "item" item: { id: "skufaddon:casing_pohuit_reinforced" Count: 2b } count: 2 }]
+		}
+	]
+	quest_links: [ ]
+}

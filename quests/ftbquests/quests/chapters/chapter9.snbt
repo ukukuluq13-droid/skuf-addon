@@ -1,0 +1,52 @@
+{
+	id: "BB97A33F4CDD07BB"
+	group: ""
+	order_index: 9
+	filename: "chapter9"
+	title: "Абсолютный похуизм"
+	icon: "minecraft:beacon"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Теперь можно не объяснять"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Собери Абсолютный Похуит — высшая устойчивость."
+			]
+			dependencies: ["8FEB9EA0C7824199"]
+			id: "468701AC627ED256"
+			tasks: [{ id: "44BACB8DE160401D" type: "item" item: "skufaddon:item_absolute_pohuit" }]
+			rewards: [{ id: "41419654DFD1B1B5" type: "xp" xp: 100 }]
+		}
+		{
+			title: "Артурийский мейнфрейм"
+			x: 2.0d
+			y: 0.0d
+			description: [
+				"Управляющее ядро финальной сборки. Собери его."
+			]
+			dependencies: ["468701AC627ED256"]
+			id: "4CF16B65D4559417"
+			tasks: [{ id: "87506148916394E3" type: "item" item: "skufaddon:item_arturian_mainframe" }]
+			rewards: [{ id: "039A8512B13BE8E9" type: "xp" xp: 80 }]
+		}
+		{
+			title: "Деревенский Покой"
+			x: 4.0d
+			y: 0.0d
+			shape: "gear"
+			description: [
+				"Ты построил завод, который мог производить всё."
+				"Теперь докажи, что можешь его выключить."
+				"Собери Сингулярность «Деревенский Покой» — ключ ПГТ и финал."
+			]
+			dependencies: ["4CF16B65D4559417"]
+			id: "409D4FACDB75EEBC"
+			tasks: [{ id: "C460CF312ADCBD80" type: "item" item: "skufaddon:item_derevenskiy_pokoy_singularity" }]
+			rewards: [{ id: "87AA2F1ACF0D1506" type: "xp" xp: 500 } { id: "8BC42EE1E91D49A4" type: "item" item: { id: "skufaddon:item_pravilnaya_vesh" Count: 4b } count: 4 }]
+		}
+	]
+	quest_links: [ ]
+}

@@ -1,0 +1,50 @@
+{
+	id: "33110C472503B08C"
+	group: ""
+	order_index: 3
+	filename: "chapter3"
+	title: "ЧПУ станкчанин"
+	icon: "minecraft:iron_ingot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Станок честнее позы"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Собери ЧПУ-резец — первый шаг к точному производству."
+			]
+			dependencies: ["0744BDAB27B3E29D"]
+			id: "13853370ACF2EC14"
+			tasks: [{ id: "B752F554597C8AB1" type: "item" item: "skufaddon:item_cnc_bit" }]
+			rewards: [{ id: "8FE398AC78EC3FB8" type: "xp" xp: 15 }]
+		}
+		{
+			title: "Резак, который режет правду"
+			x: 2.0d
+			y: 0.0d
+			description: [
+				"Сделай Резак ЧПУ. LV-цепочка точности пошла."
+			]
+			dependencies: ["13853370ACF2EC14"]
+			id: "A77C922E8A25DD41"
+			tasks: [{ id: "0BB2E62557C37BED" type: "item" item: "skufaddon:component_cnc_cutter" }]
+			rewards: [{ id: "4457256EDD355D50" type: "xp" xp: 20 }]
+		}
+		{
+			title: "Правильная Вещь"
+			x: 4.0d
+			y: 0.0d
+			description: [
+				"Сделай то, что не надо объяснять."
+				"Первая Правильная Вещь — главная валюта прогрессии."
+			]
+			dependencies: ["A77C922E8A25DD41"]
+			id: "F943C7B42F4FEF30"
+			tasks: [{ id: "BBD88E881605E4C2" type: "item" item: "skufaddon:item_pravilnaya_vesh" }]
+			rewards: [{ id: "F42C5D043C89A82E" type: "xp" xp: 40 } { id: "DEFA31D64ADBE8FF" type: "item" item: { id: "skufaddon:item_pravilnaya_vesh" Count: 1b } count: 1 }]
+		}
+	]
+	quest_links: [ ]
+}

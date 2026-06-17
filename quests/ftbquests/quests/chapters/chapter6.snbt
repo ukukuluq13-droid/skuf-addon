@@ -1,0 +1,26 @@
+{
+	id: "6DE09AA4FB42E3DB"
+	group: ""
+	order_index: 6
+	filename: "chapter6"
+	title: "Челябинский Провал"
+	icon: "minecraft:green_dye"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Счётчик трещит, но процесс идёт"
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Собери Усиленный Корпус из Похуита — каркас крупного мультиблока."
+				"Построй Челябинский Провал и добудь Уральский изотоп."
+			]
+			dependencies: ["E2E91E1BE9ED2CA3"]
+			id: "4E05B68A0157E25A"
+			tasks: [{ id: "F4026F809198534B" type: "item" item: { id: "skufaddon:casing_pohuit_reinforced" Count: 4b } count: 4L }]
+			rewards: [{ id: "EDB7993FBF55D159" type: "xp" xp: 40 }]
+		}
+	]
+	quest_links: [ ]
+}
