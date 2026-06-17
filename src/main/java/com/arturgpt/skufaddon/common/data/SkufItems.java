@@ -13,9 +13,11 @@ import com.tterrag.registrate.util.entry.ItemEntry;
  * в {@code assets/skufaddon/models/item/<name>.json} (поставляются готовыми, чтобы предметы
  * отображались без data-gen).</p>
  *
- * <p>Спец-предметы эндгейма (Капсула «Лирика в Падике» и Сингулярность «Деревенский Покой») здесь
- * НЕ заводятся: они завязаны на стазис/энтропию (домен друга — аура/тильт) и переносятся отдельным
- * коммитом вместе с эндгейм-логикой и ПГТ.</p>
+ * <p>Спец-предметы эндгейма (Капсула «Лирика в Падике» и Сингулярность «Деревенский Покой»)
+ * заведены как обычные Registrate-предметы с рецептами, моделями и локализацией. Их <b>поведение</b>
+ * (стазис игрока, заморозка тильта линии, открытие измерения ПГТ) намеренно НЕ реализовано в коде:
+ * это домен ауры/тильта друга и модпак-сайд датапак измерения. Хук оставлен под его интеграцию —
+ * см. квест-книгу ({@code quests/}) и пример датапака ПГТ ({@code datapacks/}).</p>
  */
 public class SkufItems {
 
@@ -53,6 +55,19 @@ public class SkufItems {
     public static ItemEntry<Item> ITEM_ABSOLUTE_POHUIT;
     /** Артурийский мейнфрейм — управляющее ядро финальной сборки (§23.2). */
     public static ItemEntry<Item> ITEM_ARTURIAN_MAINFRAME;
+
+    // --- Эндгейм-предметы стазиса и финала (§23, IV+/финал) ---
+    /**
+     * Капсула «Лирика в Падике» — вымышленный расходник аварийного стазиса (§23.1).
+     * Поведение (вход в {@code absolute_stasis}, заморозка тильта, дизориентация после) — домен
+     * ауры/тильта друга; здесь это craftable-предмет-гейт под его интеграцию.
+     */
+    public static ItemEntry<Item> ITEM_LYRIKA_V_PADIKE;
+    /**
+     * Сингулярность «Деревенский Покой» — победный предмет-ключ финала (§23.2). Сам по себе это
+     * ключ измерения ПГТ; открытие измерения делается модпак-сайд датапаком (см. {@code datapacks/}).
+     */
+    public static ItemEntry<Item> ITEM_DEREVENSKIY_POKOY_SINGULARITY;
 
     public static void init() {
         ITEM_CNC_BIT = SkufAddon.REGISTRATE
@@ -117,6 +132,15 @@ public class SkufItems {
 
         ITEM_ARTURIAN_MAINFRAME = SkufAddon.REGISTRATE
                 .item("item_arturian_mainframe", Item::new)
+                .register();
+
+        // --- Эндгейм-предметы стазиса и финала (§23) ---
+        ITEM_LYRIKA_V_PADIKE = SkufAddon.REGISTRATE
+                .item("item_lyrika_v_padike", Item::new)
+                .register();
+
+        ITEM_DEREVENSKIY_POKOY_SINGULARITY = SkufAddon.REGISTRATE
+                .item("item_derevenskiy_pokoy_singularity", Item::new)
                 .register();
     }
 }

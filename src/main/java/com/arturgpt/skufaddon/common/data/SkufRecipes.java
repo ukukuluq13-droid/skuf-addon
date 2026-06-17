@@ -23,9 +23,12 @@ import static com.gregtechceu.gtceu.api.data.tag.TagPrefix.*;
  * нормис-пыли и Дыма от Пыхчения на штатных ранних машинах GT (Дробилка/Центрифуга). Без них цепочка
  * жижняка не запускалась (нормис-пыль и дым были замкнуты сами на себя — известный затык загрузки).</p>
  *
- * <p><b>Отложено</b> (до интеграции ауры/тильта и измерения ПГТ — домен друга): рецепты крафта
- * отложенных машин (Индикатор Пукана, порты/шина Мыпошко, терминал «Разбор», Модуль «Ваще похуй»),
- * рецепты типа VSEM_POHUI, а также эндгейм-предметы стазиса (Лирика в Падике, Деревенский Покой).</p>
+ * <p>Эндгейм-предметы стазиса/финала (Лирика в Падике, Деревенский Покой) теперь крафтятся в
+ * {@link #finaleChain} — это craftable-гейты; их поведение остаётся за интеграцией ауры/тильта.</p>
+ *
+ * <p><b>Отложено</b> (до интеграции ауры/тильта — домен друга): рецепты крафта отложенных машин
+ * (Индикатор Пукана, порты/шина Мыпошко, терминал «Разбор», Модуль «Ваще похуй») и рецепты типа
+ * VSEM_POHUI. Открытие измерения ПГТ — модпак-сайд датапак (см. {@code datapacks/}).</p>
  */
 public class SkufRecipes {
 
@@ -40,6 +43,7 @@ public class SkufRecipes {
         myposhkoChain(provider);
         saunaChain(provider);
         endgameChain(provider);
+        finaleChain(provider);
     }
 
     /** Базовые рецепты друга — сохранены без изменений. */
@@ -520,6 +524,39 @@ public class SkufRecipes {
                 .outputItems(SkufItems.ITEM_ARTURIAN_MAINFRAME)
                 .duration(800)
                 .EUt(8192)
+                .save(provider);
+    }
+
+    /**
+     * Финальная ветка (§23): Капсула «Лирика в Падике» (аварийный стазис, IV+) и Сингулярность
+     * «Деревенский Покой» (победный предмет-ключ ПГТ). Сами предметы крафтятся здесь; их поведение
+     * (вход в стазис, заморозка тильта, открытие измерения) — домен ауры/тильта друга и модпак-сайд
+     * датапак измерения (см. {@code datapacks/} и квест-книгу {@code quests/}).
+     */
+    private static void finaleChain(Consumer<FinishedRecipe> provider) {
+        // Капсула «Лирика в Падике» (§23.1): микрокапсула + слёзы + вайб + газ Падика → расходник стазиса.
+        GTRecipeTypes.CHEMICAL_RECIPES.recipeBuilder("craft_lyrika_v_padike")
+                .inputItems(SkufItems.ITEM_CORRECT_MATTER_MICROCAPSULE)
+                .inputItems(dust, SkufMaterials.technicalTears, 2)
+                .inputFluids(SkufMaterials.stabilizedVibe.getFluid(500))
+                .inputFluids(SkufMaterials.padikNobleGas.getFluid(250))
+                .outputItems(SkufItems.ITEM_LYRIKA_V_PADIKE)
+                .duration(400)
+                .EUt(8192)
+                .save(provider);
+
+        // Сингулярность «Деревенский Покой» (§23.2): финальная сборка-победа.
+        // «Право выключить завод»: требует пик прогрессии (Похуит ×64, Вещи ×16, сингулярности ×8, мейнфрейм).
+        GTRecipeTypes.ASSEMBLER_RECIPES.recipeBuilder("craft_derevenskiy_pokoy_singularity")
+                .inputItems(SkufItems.ITEM_ABSOLUTE_POHUIT, 64)
+                .inputItems(SkufItems.ITEM_PRAVILNAYA_VESH, 16)
+                .inputItems(SkufItems.ITEM_NORMIS_SINGULARITY, 8)
+                .inputItems(SkufItems.ITEM_ARTURIAN_MAINFRAME)
+                .inputFluids(SkufMaterials.coolantOfDenial.getFluid(8000))
+                .circuitMeta(24)
+                .outputItems(SkufItems.ITEM_DEREVENSKIY_POKOY_SINGULARITY)
+                .duration(2400)
+                .EUt(32768)
                 .save(provider);
     }
 }
